@@ -14,6 +14,9 @@ Run:     python halma_pygame_4players.py
 from typing import Dict, List, Optional, Tuple, Callable
 import pygame
 
+from AI_Player_Team24 import AI_Player_Team24
+from AI_Player_Team18 import AI_Player_Team18
+
 from halma import (
     check_legal_move,
     check_win_condition,
@@ -54,16 +57,16 @@ BotFunction = Callable[
 
 '''
 Import your team's function above, then replace random_bot for that player.
-Example: from AI_Player_Team24 import AI_Player_Team24
-         1: AI_Player_Team24,
+Example: from AI_Player_Team1 import AI_Player_Team1
+         1: AI_Player_Team1,
 
 Alternatively you can set a desired player's bot function to None and play them yourself
 '''
 BOT_FUNCTIONS: Dict[int, Optional[BotFunction]] = {
-    1: random_bot,
+    1: AI_Player_Team18,
     2: random_bot,
     3: random_bot,
-    4: random_bot,
+    4: AI_Player_Team24,
 }
 
 
